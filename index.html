@@ -146,12 +146,13 @@
 
         .water-container {
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             animation: float 6s ease-in-out infinite;
+            margin-left: -50px;
         }
 
         .water-shape {
@@ -202,8 +203,8 @@
 
         .water-can {
             position: relative;
-            width: 320px;
-            height: 500px;
+            width: 380px;
+            height: 580px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -491,6 +492,7 @@
             .water-container {
                 width: 450px;
                 height: 450px;
+                margin-left: -30px;
             }
             .water-can {
                 width: 280px;
@@ -518,6 +520,8 @@
             
             .water-container {
                 animation: none;
+                margin-left: 0;
+                justify-content: center;
             }
             
             .hero-content h1 {
