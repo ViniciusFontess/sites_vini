@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mc Distribuidor - Design Moderno</title>
+    <title>Mc Distribuidor Araguá</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="mc-distribuidor-e8f4637515960ea619f661f740e4d32c_n.jpg" type="image/jpeg">
-</head>
     <style>
+        /* Estilos anteriores mantidos */
         * {
             margin: 0;
             padding: 0;
@@ -55,7 +55,7 @@
         }
 
         .logo img {
-            height: 70px;
+            height: 130px;
             background-color: #ffffff;
             border-radius: 50%;
             padding: 5px;
@@ -133,7 +133,6 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
-        /* NOVO DESIGN PARA A IMAGEM DO GALÃO */
         .hero-image-wrapper {
             flex: 1;
             max-width: 600px;
@@ -381,20 +380,21 @@
             margin-bottom: 1rem;
         }
 
-        .about-images {
+        /* ESTILOS PARA O VÍDEO (SUBSTITUINDO AS IMAGENS) */
+        .about-video {
             flex: 1;
             min-width: 300px;
             display: flex;
-            gap: 20px;
-            flex-direction: column;
             align-items: center;
+            justify-content: flex-end; /* Alinha o vídeo à direita */
+            margin-left: 40px; /* Adiciona espaço à esquerda para mover para a direita */
         }
 
-        .about-images img {
-            width: 100%;
-            max-width: 450px; 
+        .about-video video {
+            width: 80%;
+            
+            max-width: 350px; /* Aumentei um pouco o tamanho máximo */
             border-radius: 12px;
-            border: 1px solid #5a6060;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
@@ -456,7 +456,7 @@
             transition: right 0.4s ease;
         }
 
-        .mobile-menu.active {
+        .mobile-menu active {
             right: 0;
         }
 
@@ -471,7 +471,11 @@
             transition: background-color 0.3s;
         }
 
-        .mobile-menu a:hover {
+        .mobile-menu a:hover, .mobile-menu a.active {
+            background-color: #007bff;
+        }
+
+        .mobile-menu .navbar-cta {
             background-color: #007bff;
         }
 
@@ -543,6 +547,12 @@
             .contact-wrapper {
                 gap: 40px;
             }
+            
+            /* Ajuste para o vídeo em tablets */
+            .about-video {
+                margin-left: 0;
+                justify-content: center;
+            }
         }
 
         @media (max-width: 768px) {
@@ -604,11 +614,17 @@
             .contact-map iframe {
                 height: 350px;
             }
+            
+            /* Ajuste para o vídeo em mobile */
+            .about-video {
+                width: 80%;
+                margin-left: 0;
+            }
         }
 
         @media (max-width: 576px) {
             .logo img {
-                height: 60px;
+                height: 90px;
             }
             
             .hero-content h1 {
@@ -673,7 +689,7 @@
 <body>
     <header class="header">
         <a href="#" class="logo">
-            <img src="mc-distribuidor-e8f4637515960ea619f661f740e4d32c_n.jpg" alt="Logo Mc Distribuidor">
+            <img src="Logo Minimalista Água Mineral Azul.png" alt="Logo Mc Distribuidor">
         </a> 
         <nav class="navbar">
             <a href="#home">A Empresa</a>  
@@ -710,7 +726,7 @@
                     <div class="water-shape"></div>
                     <div class="water-can">
                         <div class="water-can-inner">
-                            <img src="Agua-Aragua-Alcalina-20L.jpg" alt="Galão de Água Alcalina 20L">
+                            <img src="Agua-Aragua-Levissima-20L.jpg" alt="Galão de Água Levissima 20L">
                         </div>
                     </div>
                 </div>
@@ -745,7 +761,7 @@
                     <div class="product-item">
                         <img src="Agua-Aragua-Levissima-10L.jpg" alt="Galão 10L Levissima">
                         <h3>Galão 10L Levissima</h3>
-                        <p>Praticidade e leveza para o dia a dia.</p>
+                        <p>Praticidade e leveza para o day a dia.</p>
                     </div>
                 </a>
                 <a href="https://mcdistribuidor.dualfood.com.br/" target="_blank" class="product-link">
@@ -766,7 +782,7 @@
                     <div class="product-item">
                         <img src="dilute-packshot-2025.jpg" alt="Dilute">
                         <h3>Dilute</h3>
-                        <p>Sabor e refrescância para sua água.</p>
+                        <p>Sabor e refrescância para suas bebidas e drinks.</p>
                     </div>
                 </a>
                 <a href="https://mcdistribuidor.dualfood.com.br/" target="_blank" class="product-link">
@@ -801,16 +817,18 @@
                     <p>A MC Distribuidora nasceu da visão e do empreendedorismo de Alberto Satoshi Zenji, com o propósito de se tornar a referência em distribuição de produtos essenciais e de alta qualidade em Araçatuba e região. Desde nossa fundação, temos construído uma trajetória sólida, pautada na confiança, eficiência e no compromisso inabalável com a satisfação de nossos clientes.</p>
                     <p>Com sede estratégica em Araçatuba, nossa equipe dedica-se diariamente a garantir que sua loja, comércio ou negócio tenha acesso rápido e descomplicado aos produtos que seus clientes mais procuram.</p>
                 </div>
-               <div class="about-images">
-                    <img src="107621.jpg" alt="Fachada da Mc Distribuidor">
-                    <img src="107620.jpg" alt="Interior da Mc Distribuidor">
+               <div class="about-video">
+                    <video autoplay loop muted playsinline>
+                        <source src="SaveClip.App_AQMfnFVKS5E8zAMoj472Ls51KBC-IUGuYlpcv9Y4i5I1JqHWAB_7DQQ5B6S0JEWHISrDlnZWFSVHoplcBr-JSrqrV_ifCznm4PiJQF4.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Mc Distribuidor. Todos os direitos reservados.</p>
+        <p>&copy; 2025 MC Distribuidor. Todos os direitos reservados.</p>
     </footer>
 
     <script>
@@ -836,28 +854,36 @@
             });
         });
 
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.navbar a, .mobile-menu a');
+        // Função para destacar a navegação ativa
+        function highlightNavigation() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar a, .mobile-menu a');
 
-        window.addEventListener('scroll', () => {
-            let current = '';
+            // Obter a posição atual de scroll
+            let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
             
+            // Adicionar um offset para ativar um pouco antes de chegar na seção
+            let offset = 100;
+
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
+                const sectionTop = section.offsetTop - offset;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
                 
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                    current = section.getAttribute('id');
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').includes(sectionId)) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
             });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-        });
+        }
+
+        // Executar a função ao carregar a página e ao rolar
+        window.addEventListener('load', highlightNavigation);
+        window.addEventListener('scroll', highlightNavigation);
     </script>
 </body>
 </html>
