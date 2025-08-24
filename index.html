@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="mc-distribuidor-e8f4637515960ea619f661f740e4d32c_n.jpg" type="image/jpeg">
+</head>
     <style>
-        /* Estilos anteriores mantidos */
         * {
             margin: 0;
             padding: 0;
@@ -133,6 +133,7 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
+        /* NOVO DESIGN PARA A IMAGEM DO GALÃO */
         .hero-image-wrapper {
             flex: 1;
             max-width: 600px;
@@ -380,21 +381,20 @@
             margin-bottom: 1rem;
         }
 
-        /* ESTILOS PARA O VÍDEO (SUBSTITUINDO AS IMAGENS) */
-        .about-video {
+        .about-images {
             flex: 1;
             min-width: 300px;
             display: flex;
+            gap: 20px;
+            flex-direction: column;
             align-items: center;
-            justify-content: flex-end; /* Alinha o vídeo à direita */
-            margin-left: 40px; /* Adiciona espaço à esquerda para mover para a direita */
         }
 
-        .about-video video {
-            width: 80%;
-            
-            max-width: 350px; /* Aumentei um pouco o tamanho máximo */
+        .about-images img {
+            width: 100%;
+            max-width: 450px; 
             border-radius: 12px;
+            border: 1px solid #5a6060;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
@@ -456,7 +456,7 @@
             transition: right 0.4s ease;
         }
 
-        .mobile-menu active {
+        .mobile-menu.active {
             right: 0;
         }
 
@@ -547,12 +547,6 @@
             .contact-wrapper {
                 gap: 40px;
             }
-            
-            /* Ajuste para o vídeo em tablets */
-            .about-video {
-                margin-left: 0;
-                justify-content: center;
-            }
         }
 
         @media (max-width: 768px) {
@@ -613,12 +607,6 @@
             
             .contact-map iframe {
                 height: 350px;
-            }
-            
-            /* Ajuste para o vídeo em mobile */
-            .about-video {
-                width: 80%;
-                margin-left: 0;
             }
         }
 
@@ -684,6 +672,36 @@
                 font-size: 1.4rem;
             }
         }
+        .about-video {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-video video {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Ajustes de responsividade para o vídeo */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-text p {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .about-video {
+        width: 80%;
+    }
+}
     </style>
 </head>
 <body>
@@ -817,14 +835,14 @@
                     <p>A MC Distribuidora nasceu da visão e do empreendedorismo de Alberto Satoshi Zenji, com o propósito de se tornar a referência em distribuição de produtos essenciais e de alta qualidade em Araçatuba e região. Desde nossa fundação, temos construído uma trajetória sólida, pautada na confiança, eficiência e no compromisso inabalável com a satisfação de nossos clientes.</p>
                     <p>Com sede estratégica em Araçatuba, nossa equipe dedica-se diariamente a garantir que sua loja, comércio ou negócio tenha acesso rápido e descomplicado aos produtos que seus clientes mais procuram.</p>
                 </div>
-               <div class="about-video">
-                    <video autoplay loop muted playsinline>
-                        <source src="SaveClip.App_AQMfnFVKS5E8zAMoj472Ls51KBC-IUGuYlpcv9Y4i5I1JqHWAB_7DQQ5B6S0JEWHISrDlnZWFSVHoplcBr-JSrqrV_ifCznm4PiJQF4.mp4" type="video/mp4">
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                </div>
+            <div class="about-video">
+                <video autoplay loop muted playsinline>
+                    <source src="SaveClip.App_AQMfnFVKS5E8zAMoj472Ls51KBC-IUGuYlpcv9Y4i5I1JqHWAB_7DQQ5B6S0JEWHISrDlnZWFSVHoplcBr-JSrqrV_ifCznm4PiJQF4.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <footer>
