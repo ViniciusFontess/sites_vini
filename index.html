@@ -38,6 +38,9 @@
 
         html {
             scroll-behavior: smooth;
+            /* Previne scroll horizontal */
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -46,6 +49,8 @@
             color: #222;
             line-height: 1.7;
             overflow-x: hidden;
+            width: 100%;
+            position: relative;
         }
 
         .header {
@@ -58,6 +63,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
 
         .logo {
@@ -139,6 +145,7 @@
             background-color: var(--chumbo-color);
             overflow: hidden;
             position: relative;
+            width: 100%;
         }
 
         .hero-content {
@@ -319,6 +326,7 @@
         .section {
             padding: 100px 5%;
             background-color: var(--chumbo-color);
+            width: 100%;
         }
 
         .section h2 {
@@ -459,22 +467,24 @@
             text-align: center;
             padding: 30px 5%;
             border-top: 1px solid #5a6060;
+            width: 100%;
         }
 
+        /* CORREÇÃO DO MENU MOBILE */
         .mobile-menu {
             position: fixed;
             top: 0;
             right: -100%;
-            width: 80%;
-            max-width: 350px;
+            width: 280px; /* Reduzido de 80% para 280px */
             height: 100vh;
             background-color: var(--chumbo-escuro);
             backdrop-filter: blur(10px);
             z-index: 1000;
             display: flex;
             flex-direction: column;
-            padding: 100px 30px 30px;
+            padding: 80px 20px 30px; /* Reduzido o padding superior */
             transition: right 0.4s ease;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         }
 
         .mobile-menu.active {
@@ -485,9 +495,9 @@
             display: block;
             text-decoration: none;
             color: #f5f5f5;
-            font-size: 1.4rem;
-            padding: 15px 20px;
-            margin-bottom: 15px;
+            font-size: 1.1rem; /* Reduzido de 1.4rem */
+            padding: 12px 15px; /* Reduzido o padding */
+            margin-bottom: 10px; /* Reduzido o margin */
             border-radius: 8px;
             transition: background-color 0.3s;
         }
@@ -504,9 +514,10 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            font-size: 2rem;
+            font-size: 1.8rem; /* Reduzido de 2rem */
             color: #fff;
             cursor: pointer;
+            z-index: 1002;
         }
 
         /* Responsividade */
@@ -706,6 +717,16 @@
             .contact-map iframe {
                 height: 300px;
             }
+            
+            /* Ajuste adicional para mobile */
+            .mobile-menu {
+                width: 250px; /* Mais estreito em telas pequenas */
+            }
+            
+            .mobile-menu a {
+                font-size: 1rem;
+                padding: 10px 12px;
+            }
         }
 
         @media (max-width: 400px) {
@@ -727,6 +748,23 @@
             
             .logo .logo-text {
                 height: 35px;
+            }
+            
+            /* Ajuste final para mobile muito pequeno */
+            .mobile-menu {
+                width: 220px;
+                padding: 70px 15px 20px;
+            }
+            
+            .mobile-menu a {
+                font-size: 0.95rem;
+                padding: 8px 10px;
+            }
+            
+            .close-menu {
+                font-size: 1.5rem;
+                top: 15px;
+                right: 15px;
             }
         }
 
